@@ -39,8 +39,7 @@ jobs:
         pytest
     - name: Build Docker image
       run: |
-        docker build -t myapp .
-      working-directory: ./Dockerfile  
+        docker build -t myapp .  
     - name: Run Docker container
       run: |
         docker run -d -p 8080:8080 myapp    
