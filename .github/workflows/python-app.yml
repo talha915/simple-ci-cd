@@ -42,4 +42,4 @@ jobs:
         docker build -t my-image-name .
     - name: Run Docker container
       run: |
-        docker run -d -p 8080:8080 myapp    
+        docker run -d -p 8080:8080 my-image-name    
