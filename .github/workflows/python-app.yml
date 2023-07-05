@@ -40,6 +40,7 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t myapp .
+      working-directory: ./relative/path/to/Dockerfile  
     - name: Run Docker container
       run: |
         docker run -d -p 8080:8080 myapp    
