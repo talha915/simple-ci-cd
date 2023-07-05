@@ -39,7 +39,7 @@ jobs:
         pytest
     - name: Build Docker image
       run: |
-        docker build . --file Dockerfile --tag my-image-name:$(date +%s)  
+        docker build -t my-image-name .
     - name: Run Docker container
       run: |
         docker run -d -p 8080:8080 myapp    
