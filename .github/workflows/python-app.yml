@@ -45,3 +45,6 @@ jobs:
     - name: Push Docker image to Docker Hub
       run: |
         docker push talha915/docker-simple-ci-cd-pipeline
+    - name: Run Docker image on local Docker desktop
+      run: |
+        docker run -d -p 8080:8080 talha915/docker-simple-ci-cd-pipeline    
