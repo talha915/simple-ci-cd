@@ -45,6 +45,9 @@ jobs:
     - name: Push Docker image to Docker Hub
       run: |
         docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_IMAGE_NAME }}
-    - name: Run Docker image on local Docker desktop
+    - name: Pull Docker image from Docker Hub
+      run: |
+        docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_IMAGE_NAME }}
+    - name: Run Docker container on local Docker desktop
       run: |
         docker run -d -p 8080:8080 ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_IMAGE_NAME }}    
