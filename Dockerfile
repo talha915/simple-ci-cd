@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Set the command to start the FastAPI application using uvicorn
-CMD ["uvicorn", "app.index:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.index:app", "--host", "127.0.0.1", "--port", "8000"]
